@@ -92,16 +92,17 @@ public class BinarySearchTree<T extends Comparable <T>> extends BinaryTree<T> {
                 }
                 else {//2 leafs
                     BNode<T> aux2 = aux.getRight();
+                    if(aux2.getLeft()==null) {//No left childs
+                        aux.setVal(aux2.getVal());
+                        aux.setRight(null);
+                        return true;
+                    }
                     while(aux2.getLeft()!=null) {       
                         aux2 = aux2.getLeft();
                     }
                     aux.setVal(aux2.getVal());
                     if(aux2.getRight()!=null) {
                         aux2.getPrev().insert(aux2.getRight());
-                        aux2.getPrev().setLeft(null);
-                    }
-                    else {//No childs
-                        
                     }
                 }
                 return true;

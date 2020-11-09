@@ -21,7 +21,7 @@ public class App {
         a.add(11);
         a.add(13);
         a.add(15);
-        a.delete(14);
-        System.out.println(a.preOrder());
+        //a.delete(14);
+        System.out.println(a.postOrder());
     }
 }
