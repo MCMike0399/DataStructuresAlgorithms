@@ -14,12 +14,34 @@ public class Sort {
         input.close();
     }
     public void bubbleSort() {
-        for(int i=0; i<a.length-1; i++) {
-            for(int j=i+1; j<a.length; j++) {
-                if(a[i]>a[j]) {
-                    
+        int aux;
+        for(int i=0; i<a.length; i++) {
+            for(int j=0; j<a.length-1; j++) {
+                if(a[j]>a[j+1]) {
+                    aux = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = aux;    
                 }
             }
         }
+    }
+    public void selectionSort() {
+        int aux;
+        for(int i=0; i<a.length; i++) {
+            aux = a[i];
+            for(int j=0; j<a.length; j++) {
+                
+            }
+        }
+    }
+    public void insertionSort() {
+
+    }
+    public String print() {
+        StringBuilder sb = new StringBuilder();
+        for(int i=0; i<a.length; i++) {
+            sb.append(a[i] + " ");
+        }
+        return sb.toString();
     }
 }

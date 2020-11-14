@@ -3,9 +3,10 @@ import DoublyLinkedList.*;
 import Stack.*;
 import Queue.*;
 import BinaryTree.*;
+import SortAlgorithms.*;
 public class App {
     public static void main(String[] args) throws Exception {
-        BinarySearchTree<Integer> a = new BinarySearchTree<Integer>();
+        /*BinarySearchTree<Integer> a = new BinarySearchTree<Integer>();
         a.add(8);
         a.add(4);
         a.add(12);
@@ -22,6 +23,10 @@ public class App {
         a.add(13);
         a.add(15);
         //a.delete(14);
-        System.out.println(a.postOrder());
+        System.out.println(a.postOrder());*/
+        Sort s = new Sort(5);
+        s.insertVal();
+        s.bubbleSort();
+        System.out.println(s.print());
     }
 }
