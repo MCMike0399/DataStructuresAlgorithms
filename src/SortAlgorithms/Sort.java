@@ -26,12 +26,18 @@ public class Sort {
         }
     }
     public void selectionSort() {
-        int aux;
+        int aux,min,index=0;
         for(int i=0; i<a.length; i++) {
-            aux = a[i];
-            for(int j=0; j<a.length; j++) {
-                
+            min = a[i];
+            for(int j=i; j<a.length; j++) {
+                if(min<a[j]) {
+                    min = a[j];
+                    index = j;
+                }
             }
+            aux = a[i];
+            a[i] = a[index];
+            a[index] = aux;
         }
     }
     public void insertionSort() {
